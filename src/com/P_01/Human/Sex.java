@@ -8,4 +8,6 @@ public enum Sex {
     Sex(String str){
         this.str = str;
     }
+
+
 }
