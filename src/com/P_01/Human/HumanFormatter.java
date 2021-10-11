@@ -10,8 +10,7 @@ public class HumanFormatter {
     }
 
     /**Получить полный список всех пользователей из класса Human по половому признаку
-     * @param sex MALE or FEMALE*/
-    public static ArrayList<Human> getAllHumans(Sex sex){
+     * @param sex MALE or FEMALE*/    public static ArrayList<Human> getAllHumans(Sex sex){
         ArrayList<Human> listTmp = new ArrayList<>();
         for (Human h : Human.allHumans.values()){
             if (h.getSex() == sex){
