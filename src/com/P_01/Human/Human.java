@@ -18,7 +18,7 @@ public class Human {
         this.name = name;
         this.age = age;
         this.sex = sex;
-        
+
         if (!this.hasHuman()){
             ID++;
             this.hID = ID;
@@ -37,6 +37,12 @@ public class Human {
     }
     public Sex getSex() {
         return sex;
+    }
+    public static Map<Integer, Human> getAllHumans() {
+        return allHumans;
+    }
+    public static int getID() {
+        return ID;
     }
 
     public void setName(String name) {
@@ -82,4 +88,8 @@ public class Human {
         return false;
     }
 
+    @Override
+    public String toString() {
+        return String.format("Human name: %s | ID= %d\nAge= %d\nSex: %s", name, hID, age, sex.name());
+    }
 }
