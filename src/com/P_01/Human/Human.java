@@ -90,6 +90,6 @@ public class Human {
 
     @Override
     public String toString() {
-        return String.format("Human name: %s | ID= %d\nAge= %d\nSex: %s", name, hID, age, sex.name());
+        return String.format("Human name: %s | ID= %d\nAge= %d\nSex: %s\n============", name, hID, age, sex.name());
     }
 }
