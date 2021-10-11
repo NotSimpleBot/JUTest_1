@@ -1,5 +1,6 @@
 package com.P_01.Human;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class Human {
@@ -11,11 +12,18 @@ public class Human {
     private Sex sex;
 
     public Human(String name, int age, Sex sex) {
+        if (allHumans == null){
+            allHumans = new HashMap<>();
+        }
         this.name = name;
         this.age = age;
         this.sex = sex;
-        ID++;
-        this.hID = ID;
+        
+        if (!this.hasHuman()){
+            ID++;
+            this.hID = ID;
+            allHumans.put(hID, this);
+        }
     }
 
     public int gethID() {
@@ -64,4 +72,14 @@ public class Human {
                 age == humanTmp.age &&
                 sex == humanTmp.sex;
     }
+
+    private boolean hasHuman(){
+        for (Human h : allHumans.values()){
+            if (this.equals(h) && this.hashCode() == h.hashCode()){
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
