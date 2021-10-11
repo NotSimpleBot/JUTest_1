@@ -16,22 +16,22 @@ public class Start {
         System.out.println("getHowManyHumans(Sex.FEMALE)= " + HumanFormatter.getHowManyHumans(Sex.FEMALE));
 
         System.out.println("\nИнфа по каждому человеку:\n-------------------------");
-        HumanFormatter.getAllUsers().forEach(System.out::println);
+        HumanFormatter.getAllHumans().forEach(System.out::println);
         System.out.println("\nИнфа по каждому Мужчине:\n------------------------");
-        HumanFormatter.getAllUsers(Sex.MALE).forEach(System.out::println);
+        HumanFormatter.getAllHumans(Sex.MALE).forEach(System.out::println);
         System.out.println("\nИнфа по каждой Женщине:\n-----------------------");
-        HumanFormatter.getAllUsers(Sex.FEMALE).forEach(System.out::println);
+        HumanFormatter.getAllHumans(Sex.FEMALE).forEach(System.out::println);
 
 
         System.out.println("\nСуммарное знаение возраста:\n---------------------------");
-        System.out.println("          getAllAgeUsers()= " + HumanFormatter.getAllAgeUsers());
-        System.out.println("  getAllAgeUsers(Sex.MALE)= " + HumanFormatter.getAllAgeUsers(Sex.MALE));
-        System.out.println("getAllAgeUsers(Sex.FEMALE)= " + HumanFormatter.getAllAgeUsers(Sex.FEMALE));
+        System.out.println("          getAllAgeUsers()= " + HumanFormatter.getAllAgeHumans());
+        System.out.println("  getAllAgeUsers(Sex.MALE)= " + HumanFormatter.getAllAgeHumans(Sex.MALE));
+        System.out.println("getAllAgeUsers(Sex.FEMALE)= " + HumanFormatter.getAllAgeHumans(Sex.FEMALE));
 
         System.out.println("\nСреднее значение возраста:\n--------------------------");
-        System.out.println("          getAverageAgeOfAllUsers()= " + HumanFormatter.getAverageAgeOfAllUsers());
-        System.out.println("  getAverageAgeOfAllUsers(Sex.MALE)= " + HumanFormatter.getAverageAgeOfAllUsers(Sex.MALE));
-        System.out.println("getAverageAgeOfAllUsers(Sex.FEMALE)= " + HumanFormatter.getAverageAgeOfAllUsers(Sex.FEMALE));
+        System.out.println("          getAverageAgeOfAllUsers()= " + HumanFormatter.getAverageAgeOfAllHumans());
+        System.out.println("  getAverageAgeOfAllUsers(Sex.MALE)= " + HumanFormatter.getAverageAgeOfAllHumans(Sex.MALE));
+        System.out.println("getAverageAgeOfAllUsers(Sex.FEMALE)= " + HumanFormatter.getAverageAgeOfAllHumans(Sex.FEMALE));
 
 
 

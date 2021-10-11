@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Human {
-    private static Map<Integer, Human> allHumans;
+    public static Map<Integer, Human> allHumans;
     private static int ID = 0;
     private int hID;
     private String name;
@@ -37,9 +37,6 @@ public class Human {
     }
     public Sex getSex() {
         return sex;
-    }
-    public static Map<Integer, Human> getAllHumans() {
-        return allHumans;
     }
     public static int getID() {
         return ID;
