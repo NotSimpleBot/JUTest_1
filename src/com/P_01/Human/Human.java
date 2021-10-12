@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Human {
-    public static Map<Integer, Human> allHumans;
+    public static Map<Integer, Human> allHumans = new HashMap<>();;
     private static int ID = 0;
     private int hID;
     private String name;
@@ -12,9 +12,6 @@ public class Human {
     private Sex sex;
 
     public Human(String name, int age, Sex sex) {
-        if (allHumans == null){
-            allHumans = new HashMap<>();
-        }
         this.name = name;
         this.age = age;
         this.sex = sex;
