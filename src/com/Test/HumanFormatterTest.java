@@ -4,21 +4,26 @@ import com.P_01.Human.Human;
 import com.P_01.Human.HumanFormatter;
 import com.P_01.Human.Sex;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
-
 public class HumanFormatterTest {
+    private Human human_1;
+    private Human human_2;
+    private Human human_3;
+
+    @Before
+    public void setUp(){
+         human_1 = new Human("Евгений", 35, Sex.MALE);
+         human_2 = new Human("Марина", 34, Sex.FEMALE);
+         human_3 = new Human("Алина", 7, Sex.FEMALE);
+    }
 
     @Test
     public void getAllHumans() {
-        //создаем тестовые данные
-        Human user = new Human("Евгений", 35, Sex.MALE);
-        Human user1 = new Human("Марина", 34, Sex.FEMALE);
-        Human user2 = new Human("Алина", 7, Sex.FEMALE);
 
         //создаем список expected и заполняем его данными нашего метода
         List<Human> expected = HumanFormatter.getAllHumans();
@@ -26,9 +31,9 @@ public class HumanFormatterTest {
         //создаем список actual в него помещаем данные для сравнения
         //то что мы предпологиаем метод должен вернуть
         List<Human> actual = new ArrayList<>();
-        actual.add(user);
-        actual.add(user1);
-        actual.add(user2);
+        actual.add(human_1);
+        actual.add(human_2);
+        actual.add(human_3);
 
         //запускаем тест, в случае если список expected и actual не будут равны
         //тест будет провален, о результатах теста читаем в консоли
