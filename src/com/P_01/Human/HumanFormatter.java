@@ -10,7 +10,8 @@ public class HumanFormatter {
     }
 
     /**Получить полный список всех пользователей из класса Human по половому признаку
-     * @param sex MALE or FEMALE*/    public static ArrayList<Human> getAllHumans(Sex sex){
+     * @param sex MALE or FEMALE*/
+    public static ArrayList<Human> getAllHumans(Sex sex){
         ArrayList<Human> listTmp = new ArrayList<>();
         for (Human h : Human.allHumans.values()){
             if (h.getSex() == sex){
@@ -31,6 +32,7 @@ public class HumanFormatter {
         return getAllHumans(sex).size();
     }
 
+
     /**Возвращает сумму возрастов всех пользователей общего списка класса Human*/
     public static int getAllAgeHumans(){
         int sum = 0;
@@ -39,6 +41,7 @@ public class HumanFormatter {
         }
         return sum;
     }
+
 
     /**Возвращает сумму возрастов всех пользователей общего списка класса Human по половому признаку
      * @param sex Sex.MALE or Sex.FEMALE*/
@@ -50,10 +53,12 @@ public class HumanFormatter {
         return sum;
     }
 
+
     /**Возвращает средний возраст общего списка класса Human*/
     public static int getAverageAgeOfAllHumans(){
         return getAllAgeHumans() / getHowManyHumans();
     }
+
 
     /**Возвращает средний возраст общего списка класса Human согласно половому признаку
      * @param sex Sex.MALE or Sex.FEMALE*/
